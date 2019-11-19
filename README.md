@@ -2,4 +2,4 @@
 
 参考书籍： 《Flask Web开发实战》 李辉
 
-https://github.com/greyli/helloflask
+参考项目： https://github.com/greyli/helloflask
