@@ -7,6 +7,7 @@
 """
 
 from flask import Flask
+import click
 
 app = Flask(__name__)  # 实例化Flask类
 
@@ -28,3 +29,9 @@ def say_hello():
 @app.route('/greet/<name>')
 def greet(name):
     return '<h1> Hello %s </h1>' % name
+
+
+# 将函数注册为flask命令，函数名称可以设置，否则默认为函数名（不能有下划线） --> flask say-hello
+@app.cli.command('say-hello')
+def hello():
+    click.echo("Hello, Flasker!")
